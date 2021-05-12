@@ -6,8 +6,6 @@
 Welcome to simple-doc-server documentation!
 ===========================================
 
-This documentation outlines ...
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
