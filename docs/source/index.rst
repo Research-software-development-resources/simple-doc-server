@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to simple-doc-server documentation!
-========================================
+===========================================
 
 This documentation outlines ...
 
@@ -12,9 +12,7 @@ This documentation outlines ...
    :maxdepth: 2
    :caption: Contents:
 
-   contributors
    introduction
-   server_setup
    hosting_documentation
 
 Indices and tables
