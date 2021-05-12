@@ -9,6 +9,9 @@ The group environment can be used as the production environment, the user enviro
 Hosting on the user environment
 -------------------------------
 
+User setup
+^^^^^^^^^^
+
 #. Navigate to ``<server_root>/users``
 
    * ``<server_root>``: the folder where the server is running from.
@@ -22,7 +25,7 @@ Hosting on the user environment
 
       .. code-block:: html
 
-         <li><a href="./username/index.html">Username</a></li>
+         <li><a href="./username/index.html">your full name</a></li>
 
       .. figure:: ./images/users_index.PNG
          :name: index.html
@@ -31,13 +34,22 @@ Hosting on the user environment
 
          index.html
 
-#. Navigate to your user folder ``<server_root>/documentation/users/<username>``
-#. Copy and paste the ``template-documentation`` folder in the current folder. Then rename it with the name of the documentation you are going to upload.
-#. Edit the ``index.html`` in the current folder - ``<server_root>/documentation/users/<username>``.
+Documentation entrypoint setup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Navigate to your user folder ``<server_root>/users/<username>``
+#. Create a folder with the same name of your documentation and a ``docs`` folder inside it.
+
+   .. code-block:: bash
+
+      mkdir -p <server_root>/users/<username>/<docuemntation_name>/docs
+
+#. Edit the ``index.html`` in the current folder - ``<server_root>/users/<username>``.
 
    #. Open the ``index.html`` file
+   #. Search for the ``<h1>`` tag, then change the username to your username
    #. Search for the ``documentationList`` block
-   #. Append a html list item to ``documentationList``. Append something similar to
+   #. Append a html list item to the list. Append something similar to
 
       .. code-block:: html
 
@@ -50,18 +62,32 @@ Hosting on the user environment
 
          index.html
 
+Uploading/updating documentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You are now ready to upload your documentation to your user environment!
+Please upload your built documentation (the ``build`` folder generated from your Sphinx documentation) to ``<server_root>/documentation/users/<username>/<documentation_name>/docs/``
+
 .. _Hosting on the group environment:
 
 Hosting on the group environment
 -------------------------------
 
-#. Navigate to the ``group`` folder ``<server_root>/documentation/users/<username>``
-#. Copy and paste the ``template-documentation`` folder in the current folder. Then rename it with the name of the documentation you are going to upload.
-#. Edit the ``index.html`` in the current folder - ``<server_root>/documentation/users/<username>``.
+Documentation entrypoint setup
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Navigate to the ``group`` folder ``<server_root>/group/``
+#. Create a folder with the same name of your documentation and a ``docs`` folder inside it.
+
+   .. code-block:: bash
+
+      mkdir -p <server_root>/group>/<docuemntation_name>/docs
+
+#. Edit the ``index.html`` in the current folder - ``<server_root>/group``.
 
    #. Open the ``index.html`` file
    #. Search for the ``documentationList`` block
-   #. Append a list item to the list inside the ``container`` block. Append something similar to
+   #. Append a html list item to the list. Append something similar to
 
       .. code-block:: html
 
@@ -74,29 +100,11 @@ Hosting on the group environment
 
          index.html
 
-#. You are now ready to upload your documentation! See :ref:`Upload your build`
+Uploading/updating documentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _Upload your build:
-
-Uploading your build
---------------------
-
-#. Locally build your Sphinx documentation. See the `Sphinx documentation <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ to learn more about Sphinx
-
-   .. note::
-
-      A build here is a process of converting your Sphinx documentation to HTML files
-
-#. Upload the entire build folder
-
-   * Upload to the user environment: ``<server_root>/documentation/users/<username>/<documentation_name>/docs/``
-   * Upload to the group environment: ``<server_root>/documentation/group/<documentation_name>/docs/``
-
-   .. note::
-
-      If you had uploaded the build folder before, you might be asked whether your want to replace or ship the existing files. It is OK to replace them with the new build.
-
-   * Done! the updated version is now hosted! Refresh the web page.
+You are now ready to upload your documentation to the group environment!
+Please upload your built documentation (the ``build`` folder generated from your Sphinx documentation) to ``<server_root>/documentation/group/<documentation_name>/docs/``
 
 
 
