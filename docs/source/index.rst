@@ -11,6 +11,7 @@ Welcome to simple-doc-server documentation!
    :caption: Contents:
 
    introduction
+   quick_start
    hosting_documentation
 
 Indices and tables
