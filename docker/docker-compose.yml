@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  doc-server:
+    image: simple-doc-server
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+#     TODO. Set values for PATH_TO_DOCUMENT_ROOT & PATH_TO_PASSWORD_FILE
+      - PATH_TO_DOCUMENT_ROOT:/usr/share/nginx/html
+      - PATH_TO_PASSWORD_FILE:/etc/nginx/.htpasswd
